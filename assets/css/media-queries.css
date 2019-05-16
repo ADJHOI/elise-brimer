@@ -5,18 +5,47 @@
         display: block;
         margin: 0px 30px 30px 30px !important;
         width: calc(100% - 60px);
+/*        min-height: 475px;*/
         height: calc(100vh - 100px);
-        max-height: 675px;
+        max-height: 900px;
         float: none !important;
     }
 
     .page:last-child{
-        left: 0;
+        left: auto;
         transform: translateX(0);
     }
     
     .page:nth-child(2n) .descript-reveal{
         text-align: left;
+    }
+    
+    .page:nth-child(2n) .arrow-reveal{
+        left: 20px;
+        right: auto;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    
+    .page:nth-child(2n) .arrow-reveal.active{
+        transform: rotate(180deg);
+    }
+    
+    .info-heading:first-child{
+        padding-top:  20px;
+        padding-bottom: 20px;
+    }
+    
+    .info-heading{
+        padding: 10px 40px 5px 40px;
+    }
+    
+    .contact{
+        bottom: 20px
+    }
+    
+    .contact .info-heading{
+        padding-bottom: 5px;
     }
     
 }
@@ -50,7 +79,13 @@
     }
     
     .page{
-        max-height: 545px;
+        margin: 0px 15px 15px 15px !important;
+        width: calc(100% - 30px);
+        max-height: 475px;
+    }
+    
+    .page:last-child{
+        margin-top: -5px !important;
     }
     
     .work-title{
@@ -65,15 +100,68 @@
     }
     
     .work-descript{
-        top: 65px;
-        margin: 0px 40px;
-        width: calc(100% - 80px);
+        top: 55px;
+        margin: 0px 20px;
+        width: calc(100% - 40px);
     }
     
     .counter{
-        width: calc(100% - 40px);
-        padding: 20px 20px;
+        width: calc(100% - 20px);
+        padding: 15px 10px;
         height: 25px;
+    }
+ 
+    .arrow-reveal{
+        top: 10px;
+        left: 10px !important;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .info-heading{
+        padding: 10px 20px 5px 20px;
+        width: calc(100% - 40px)
+    }
+    
+    .info-heading:first-child{
+        padding-top:  15px;
+        padding-bottom: 15px;
+    }
+    
+    .about{
+        padding: 0px 20px;
+        margin: 0px;
+    }
+    
+    .education{
+        float: left;
+        margin-top: 0px;
+        padding-left: 20px;
+    }
+    
+    .contact{
+        bottom: 20px
+    }
+    
+    .contact .info-heading{
+        padding-bottom: 0px;
+    }
+    
+    .main-carousel{
+        padding: 0px 35px;
+        width: calc(100% - 70px);
+        height: calc(100% - 125px);
+        top: 20px
+    }
+    
+    .flickity-prev-next-button.previous{
+        width: 35px !important;
+        left: 2px !important;
+    }
+    
+    .flickity-prev-next-button.next{
+        width: 35px !important;
+        right: 2px !important;    
     }
     
 }

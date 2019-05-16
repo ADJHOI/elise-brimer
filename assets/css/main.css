@@ -15,14 +15,14 @@ html, body{
 
 h1{
     font-family: gastromond, sans-serif;
-    color: #efab9f;
+    color: #ff6a6a;
     font-size: 34px;
     font-weight: 400;
 }
 
 h2{
     font-family: minion-pro-subhead, serif;
-    color: #efab9f;
+    color: #ff6a6a;
     font-size: 26px;
     font-weight: 500;
     font-style: italic;
@@ -30,22 +30,22 @@ h2{
 
 h3{
     font-family: minion-pro-caption, serif;
-    color: #efab9f;
-    font-size: 20px;
+    color:#ff6a6a;
+    font-size: 22px;
     font-weight: 500;
 }
 
 p{
     font-family: minion-pro-caption, serif;
-    color: #efab9f;
-    font-size: 16px;
+    color: #ff6a6a;
+    font-size: 17px;
     line-height: 20px;
     font-weight: 500;
 }
 
 a, a:visited, a:active{
     text-decoration: none;
-    color: #efab9f;
+    color: #ff6a6a;
 }
 
 a:hover{
@@ -64,6 +64,7 @@ a:hover{
     line-height: 32px;
     margin: 0px;
     z-index: 5;
+    color: #ea3232;
 }
 
 .subtitle{
@@ -80,7 +81,8 @@ a:hover{
     box-shadow: 0px -50px 50px #ffffff;
     width: 100%;
     padding: 0px;
-    margin-top: 93vh;
+    margin: auto auto;
+    margin-top: 92vh;
     background-color: #ffffff;
 }
 
@@ -90,7 +92,7 @@ a:hover{
     margin: 0px 30px 30px 60px;
     width: calc(50% - 75px);
     height: 675px;
-    background-color: #ffebe2;
+    background-color: rgb(255, 221, 213);
     float: left;
 }
 
@@ -111,7 +113,7 @@ a:hover{
     margin: auto auto;
     width: 60%;
     padding: 15px 0px 8px 0px;
-    border-bottom: 1px solid #efab9f;
+    border-bottom: 1px solid #ff6a6a;
 }
 
 .descript-reveal{
@@ -121,6 +123,35 @@ a:hover{
     width: calc(100% - 40px);
     font-size: 50px;
     z-index: 10;
+}
+
+.arrow-reveal{
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    fill: #ff6a6a;
+}
+
+.arrow-reveal:hover{
+    opacity: 0.5;
+}
+
+.page:nth-child(2n) .arrow-reveal{
+    left: auto;
+    right: 20px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.arrow-reveal.active{
+    transform: rotate(180deg);
+}
+
+.page:nth-child(2n) .arrow-reveal.active{
+    transform: rotate(270deg);
 }
 
 .page:nth-child(2n) .descript-reveal{
@@ -133,6 +164,11 @@ a:hover{
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+/*    opacity: 1;*/
+}
+
+.reveal:hover{
+    opacity: 0.5;
 }
 
 .work-descript{
@@ -148,6 +184,10 @@ a:hover{
     visibility: visible;
 }
 
+#info{
+    margin-bottom: 60px;
+}
+
 .info-body{
     margin-top: 20px;
 }
@@ -155,19 +195,38 @@ a:hover{
 .info-heading{
     font-style: italic;
     margin: 0px;
-    padding: 40px 15px 15px 15px; 
-    width: calc(100% - 30px);
+    padding: 15px 40px 5px 40px; 
+    width: calc(100% - 80px);
+}
+
+.center{
     text-align: center;
 }
 
 .info-heading:first-child{
     padding-top:  0px;
+    padding-bottom: 15px;
+}
+
+.contact .info-heading{
+    padding-bottom: 0px;
 }
 
 .info-para{
     margin: 5px 60px; 
     width: calc(100% - 110px);
     text-align: left;
+}
+
+.about{
+    padding: 0px 40px;
+    margin: 0px;
+}
+
+.education{
+    float: left;
+    margin-top: 0px;
+    padding-left: 40px;
 }
 
 .contact{
@@ -200,8 +259,8 @@ a:hover{
 .main-carousel{
     position: absolute;
     top: 35px;
-    padding: 0px 60px;
-    width: calc(100% - 120px);
+    padding: 0px 50px;
+    width: calc(100% - 100px);
     height: calc(100% - 175px);
 }
 
@@ -211,8 +270,8 @@ a:hover{
 }
 
 .carousel-cell{
-    margin: 0px 20px;
-    width: calc(100% - 40px);
+    margin: 0px 10px;
+    width: calc(100% - 20px);
     height: 100%;    
 }
 
@@ -221,7 +280,7 @@ a:hover{
 }
 
 .flickity-button-icon {
-  fill: #efab9f !important;
+  fill: #ff6a6a !important;
 }
 
 .image-wrapper{

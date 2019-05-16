@@ -67,12 +67,32 @@ function spUpdate() {
 spUpdate();
 $spCarousel.on( 'select.flickity', spUpdate );
 
-$(".reveal").click(function(event){
-    $(this).parent().next().toggleClass("active");
-    $(this).parent().siblings(".main-carousel").toggleClass("active");
-    if ($(this).parent().next().hasClass("active")) {
-        $(this).html("×");
-    } else {
-        $(this).html("+");
-    }
+$(".arrow-reveal").click(function(event){
+    $(this).toggleClass("active");
+    $(this).next().toggleClass("active");
+    $(this).siblings(".main-carousel").toggleClass("active");
 });
+
+$(function () {
+var touch = 'ontouchstart' in document.documentElement
+            || navigator.maxTouchPoints > 0
+            || navigator.msMaxTouchPoints > 0;
+
+if (touch) {
+    try {
+    
+        for (var si in document.styleSheets) {
+            var styleSheet = document.styleSheets[si];
+            if (!styleSheet.rules) continue;
+
+            for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                if (!styleSheet.rules[ri].selectorText) continue;
+
+                if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                    styleSheet.deleteRule(ri);
+                }
+            }
+        }
+    } catch (ex) {}
+}
+    });   
