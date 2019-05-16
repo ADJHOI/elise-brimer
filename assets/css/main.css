@@ -74,7 +74,7 @@ a:hover{
     line-height: 32px;
     margin: 0px;
     z-index: 5;
-    color: #ea3232;
+    color: #e61c1c;
 }
 
 .subtitle{
@@ -188,6 +188,7 @@ a:hover{
     width: calc(100% - 120px);
     visibility: hidden;
     z-index: 6;
+    text-align: center;
 }
 
 .work-descript.active{
