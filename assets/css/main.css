@@ -13,6 +13,16 @@ html, body{
     -moz-text-size-adjust: none;
 }
 
+::-moz-selection {
+  color: #ffddd5;
+  background: #ff6a6a;
+}
+
+::selection {
+  color: #ffddd5; 
+  background: #ff6a6a;
+}
+
 h1{
     font-family: gastromond, sans-serif;
     color: #ff6a6a;
@@ -92,7 +102,7 @@ a:hover{
     margin: 0px 30px 30px 60px;
     width: calc(50% - 75px);
     height: 675px;
-    background-color: rgb(255, 221, 213);
+    background-color: #ffddd5;
     float: left;
 }
 
@@ -265,7 +275,7 @@ a:hover{
 }
 
 .main-carousel.active{
-    opacity: 0.1;
+    opacity: 0.06;
     pointer-events: none;
 }
 
