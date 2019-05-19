@@ -74,7 +74,7 @@
     }
 
     p{
-        font-size: 0.8em;
+        font-size: 0.85em;
         line-height: 1.3em;
     }
     
@@ -140,7 +140,7 @@
     }
     
     .contact{
-        bottom: 20px
+        bottom: 5px
     }
     
     .contact .info-heading{

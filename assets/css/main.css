@@ -25,29 +25,30 @@ html, body{
 
 h1{
     font-family: gastromond, sans-serif;
-    color: #ff6a6a;
+/*    color: #64f490;*/
+    color: #4ed979;
     font-size: 34px;
     font-weight: 400;
 }
 
 h2{
     font-family: minion-pro-subhead, serif;
-    color: #ff6a6a;
+    color: #4ed979;
     font-size: 26px;
     font-weight: 500;
-    font-style: italic;
+/*    font-style: italic;*/
 }
 
 h3{
     font-family: minion-pro-caption, serif;
-    color:#ff6a6a;
+    color:#535353;
     font-size: 22px;
     font-weight: 500;
 }
 
 p{
     font-family: minion-pro-caption, serif;
-    color: #ff6a6a;
+    color: #535353;
     font-size: 17px;
     line-height: 20px;
     font-weight: 500;
@@ -55,26 +56,25 @@ p{
 
 a, a:visited, a:active{
     text-decoration: none;
-    color: #ff6a6a;
+    color: #535353;
 }
 
 a:hover{
     text-decoration: underline;
 }
 
-.italics{
-    font-style: italic;
-}
-
 .title{
     position: fixed;
+/*    padding: 10px 0px;*/
     top: 10px;
     width: 100%;
     text-align: center;
     line-height: 32px;
     margin: 0px;
     z-index: 5;
-    color: #e61c1c;
+/*    color: #4ed979;*/
+    color: #65c482;
+/*    background-color: #ffffff;*/
 }
 
 .subtitle{
@@ -123,7 +123,7 @@ a:hover{
     margin: auto auto;
     width: 60%;
     padding: 15px 0px 8px 0px;
-    border-bottom: 1px solid #ff6a6a;
+    border-bottom: 1px solid #535353;
 }
 
 .descript-reveal{
@@ -142,7 +142,8 @@ a:hover{
     left: 20px;
     width: 25px;
     height: 25px;
-    fill: #ff6a6a;
+/*    fill: #64f490;*/
+    fill: #4ed979;
     z-index: 10;
 }
 
@@ -205,7 +206,7 @@ a:hover{
 }
 
 .info-heading{
-    font-style: italic;
+/*    font-style: italic;*/
     margin: 0px;
     padding: 15px 40px 5px 40px; 
     width: calc(100% - 80px);
@@ -288,11 +289,12 @@ a:hover{
 }
 
 .flickity-button {
-  background: transparent !important;
+    background: transparent !important;
 }
 
 .flickity-button-icon {
-  fill: #ff6a6a !important;
+/*    fill: #64f490 !important;*/
+    fill: #4ed979 !important;
 }
 
 .image-wrapper{
