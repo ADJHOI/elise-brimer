@@ -13,6 +13,7 @@ html, body{
     -moz-text-size-adjust: none;
 }
 
+/*
 ::-moz-selection {
   color: #ffddd5;
   background: #ff6a6a;
@@ -20,23 +21,29 @@ html, body{
 
 ::selection {
   color: #ffddd5; 
-  background: #ff6a6a;
+  background: #ffddd5;
+}
+*/
+
+html.locked{
+    overflow-y: hidden;
 }
 
 h1{
     font-family: gastromond, sans-serif;
 /*    color: #64f490;*/
-    color: #4ed979;
+    color: #4ad374;
     font-size: 34px;
     font-weight: 400;
 }
 
 h2{
     font-family: minion-pro-subhead, serif;
-    color: #4ed979;
+/*    color: #4ed979;*/
+/*    color: #4ad374;*/
+    color: #67bc81;
     font-size: 26px;
     font-weight: 500;
-/*    font-style: italic;*/
 }
 
 h3{
@@ -63,18 +70,28 @@ a:hover{
     text-decoration: underline;
 }
 
+.italics{
+    font-style: italic;
+}
+
 .title{
     position: fixed;
-/*    padding: 10px 0px;*/
     top: 10px;
     width: 100%;
     text-align: center;
-    line-height: 32px;
+    line-height: 33px;
     margin: 0px;
     z-index: 5;
-/*    color: #4ed979;*/
-    color: #65c482;
-/*    background-color: #ffffff;*/
+}
+
+.title a{
+    color: #67bc81;
+    cursor: help;
+    text-decoration: none;
+}
+
+.title a:hover{
+    opacity: 0.75;
 }
 
 .subtitle{
@@ -87,7 +104,7 @@ a:hover{
 }
 
 .body-container{
-    position: absolute;
+    position: relative;
     box-shadow: 0px -50px 50px #ffffff;
     width: 100%;
     padding: 0px;
@@ -98,24 +115,43 @@ a:hover{
 
 .page{
     position: relative;
-    display: block;
+    display: inline-block;
     margin: 0px 30px 30px 60px;
     width: calc(50% - 75px);
     height: 675px;
     background-color: #ffddd5;
-    float: left;
+/*    float: left;*/
 }
 
 .page:nth-child(2n){
-    margin-right: 60px;
-    margin-left: 0px;
-    float: right;
+/*    display: inline-block;*/
+    margin-right: 0px;
+    margin-left: -5px;
+/*    float: right;*/
 }
 
 .page:last-child{
-    margin: 0px 0px 30px 0px;
-    left: 50%;
-    transform: translateX(-50%);
+/*    margin: 0px 0px 30px 0px;*/
+    margin: 0px auto;
+    margin-top: -20px;
+    display: block;
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+}
+
+.page.active{
+    visibility: hidden;
+}
+
+.page.current{
+    visibility: visible;
+    position: fixed;
+    margin-left: 0px;
+    left: 60px;
+    top: 15px;
+    z-index: 15;
+    width: calc(100vw - 120px);
+    height: calc(100vh - 30px);
 }
 
 .work-title{
@@ -126,43 +162,54 @@ a:hover{
     border-bottom: 1px solid #535353;
 }
 
-.descript-reveal{
+.page-header{
     position: absolute;
-    top: -10px;
-    margin: 0px 20px;
-    width: calc(100% - 40px);
-    font-size: 50px;
     z-index: 10;
-}
-
-.arrow-reveal{
-    cursor: pointer;
-    position: absolute;
     top: 20px;
     left: 20px;
+}
+
+.page:nth-child(2n) .page-header{
+    left: auto;
+    right: 20px;
+}
+
+.descript-reveal{
+    position: relative;
+    z-index: 13;
+    margin-top: 5px;
+    width: calc(100% - 40px);
+    font-size: 45px;
+    z-index: 10;
+    line-height: 45px;
+}
+
+.expand{
+    position: relative;
+    z-index: 14 !important;
+    cursor: pointer;
     width: 25px;
     height: 25px;
 /*    fill: #64f490;*/
-    fill: #4ed979;
+    fill: #4ad374;
     z-index: 10;
 }
 
-.arrow-reveal:hover{
+.expand:hover{
     opacity: 0.5;
 }
 
-.page:nth-child(2n) .arrow-reveal{
-    left: auto;
-    right: 20px;
+
+.page:nth-child(2n) .expand{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
 
-.arrow-reveal.active{
+.expand.active{
     transform: rotate(180deg);
 }
 
-.page:nth-child(2n) .arrow-reveal.active{
+.page:nth-child(2n) .expand.active{
     transform: rotate(270deg);
 }
 
@@ -208,16 +255,13 @@ a:hover{
 .info-heading{
 /*    font-style: italic;*/
     margin: 0px;
-    padding: 15px 40px 5px 40px; 
+    padding: 15px 40px 10px 40px; 
     width: calc(100% - 80px);
-}
-
-.center{
     text-align: center;
 }
 
 .info-heading:first-child{
-    padding-top:  0px;
+    padding-top:  20px;
     padding-bottom: 15px;
 }
 
@@ -236,10 +280,25 @@ a:hover{
     margin: 0px;
 }
 
+.education-container{
+    margin: auto 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.education-wrapper{
+    margin: auto auto;
+}
+
 .education{
-    float: left;
+    display: inline-block;
     margin-top: 0px;
-    padding-left: 40px;
+    margin-right: 30px;
+}
+
+.education:last-child{
+    margin-right: 0px;
 }
 
 .contact{
@@ -292,9 +351,12 @@ a:hover{
     background: transparent !important;
 }
 
+.flickity-button:hover {
+    opacity: 0.5 !important;
+}
+
 .flickity-button-icon {
-/*    fill: #64f490 !important;*/
-    fill: #4ed979 !important;
+    fill: #4ad374 !important;
 }
 
 .image-wrapper{

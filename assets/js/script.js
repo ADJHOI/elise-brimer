@@ -1,5 +1,4 @@
 $('.main-carousel').flickity({
-  // options
     cellAlign: 'center',
     contain: true,
     pageDots: false,
@@ -67,32 +66,52 @@ function spUpdate() {
 spUpdate();
 $spCarousel.on( 'select.flickity', spUpdate );
 
-$(".arrow-reveal").click(function(event){
+$(".descript-reveal").click(function(event){
     $(this).toggleClass("active");
-    $(this).next().toggleClass("active");
-    $(this).siblings(".main-carousel").toggleClass("active");
+    $(this).parent().next().toggleClass("active");
+    $(this).parent().siblings(".main-carousel").toggleClass("active");
+    if ($(this).hasClass("active")) {
+        $(this).children(".reveal").html("×")
+    } else {
+        $(this).children(".reveal").html("+")
+    }
+});
+
+$(".expand").click(function(event){
+    $(".page").toggleClass("active");
+    $("html").toggleClass("locked");
+    $(this).parent().parent().toggleClass("current");
+    $(this).toggleClass("active");
+});
+
+$(".title").click(function(event){
+    if (($(window).scrollTop() + $(window).height()) < $(document).height()){
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#info").offset().top
+        }, 450);
+    }
 });
 
 $(function () {
-var touch = 'ontouchstart' in document.documentElement
-            || navigator.maxTouchPoints > 0
-            || navigator.msMaxTouchPoints > 0;
+    var touch = 'ontouchstart' in document.documentElement
+                || navigator.maxTouchPoints > 0
+                || navigator.msMaxTouchPoints > 0;
 
-if (touch) {
-    try {
-    
-        for (var si in document.styleSheets) {
-            var styleSheet = document.styleSheets[si];
-            if (!styleSheet.rules) continue;
+    if (touch) {
+        try {
 
-            for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-                if (!styleSheet.rules[ri].selectorText) continue;
+            for (var si in document.styleSheets) {
+                var styleSheet = document.styleSheets[si];
+                if (!styleSheet.rules) continue;
 
-                if (styleSheet.rules[ri].selectorText.match(':hover')) {
-                    styleSheet.deleteRule(ri);
+                for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                    if (!styleSheet.rules[ri].selectorText) continue;
+
+                    if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                        styleSheet.deleteRule(ri);
+                    }
                 }
             }
-        }
-    } catch (ex) {}
-}
-    });   
+        } catch (ex) {}
+    }
+});   

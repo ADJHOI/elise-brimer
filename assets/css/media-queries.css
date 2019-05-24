@@ -10,24 +10,36 @@
         max-height: 900px;
         float: none !important;
     }
-
+    
+    .page.current{
+        margin-left: 0px !important;
+        left: 30px;
+        width: calc(100vw - 60px);
+        max-height: calc(100vh - 30px);
+    }
+    
     .page:last-child{
         left: auto;
         transform: translateX(0);
     }
     
-    .page:nth-child(2n) .descript-reveal{
-        text-align: left;
+    .page-header{
+        position: absolute;
+        top: 15px;
+        left: 15px;
     }
     
-    .page:nth-child(2n) .arrow-reveal{
-        left: 20px;
+    .page:nth-child(2n) .page-header{
+        left: 15px;
         right: auto;
+    }
+    
+    .page:nth-child(2n) .expand{
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
     }
     
-    .page:nth-child(2n) .arrow-reveal.active{
+    .page:nth-child(2n) .expand.active{
         transform: rotate(180deg);
     }
     
@@ -58,7 +70,7 @@
     }
 
     .title{
-        line-height: 1em;
+        line-height: 1.2em;
     }
     
     h2{
@@ -84,38 +96,39 @@
         max-height: 475px;
     }
     
+    .page.current{
+        left: 15px;
+        width: calc(100vw - 30px);
+    }
+    
     .page:last-child{
         margin-top: -5px !important;
     }
     
     .work-title{
-        padding: 15px 0px 10px 0px;
+        padding: 15px 0px 5px 0px;
     }
     
     .descript-reveal{
+        margin-top: 0px;
         font-size: 2.5em;
-        top: -5px;
-        margin: 0px 15px;
-        width: calc(100% - 30px);
+    }
+    
+    .expand{
+        width: 20px;
+        height: 20px;
     }
     
     .work-descript{
-        top: 55px;
-        margin: 0px 20px;
-        width: calc(100% - 40px);
+        top: 54px;
+        margin: 0px 50px;
+        width: calc(100% - 100px);
     }
     
     .counter{
-        width: calc(100% - 20px);
-        padding: 15px 10px;
+        width: calc(100% - 30px);
+        padding: 15px 15px;
         height: 25px;
-    }
- 
-    .arrow-reveal{
-        top: 10px;
-        left: 10px !important;
-        width: 20px;
-        height: 20px;
     }
     
     .info-heading{
@@ -133,10 +146,14 @@
         margin: 0px;
     }
     
+    .education-container{
+        margin: auto 20px;;
+    }
+    
     .education{
         float: left;
         margin-top: 0px;
-        padding-left: 20px;
+        margin-right: 20px;
     }
     
     .contact{
