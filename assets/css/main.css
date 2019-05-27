@@ -339,8 +339,8 @@ a:hover{
 .main-carousel{
     position: absolute;
     top: 35px;
-    padding: 0px 50px;
-    width: calc(100% - 100px);
+    padding: 0px 60px;
+    width: calc(100% - 120px);
     height: calc(100% - 175px);
 }
 
