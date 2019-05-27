@@ -67,10 +67,10 @@ spUpdate();
 $spCarousel.on( 'select.flickity', spUpdate );
 
 $(".descript-reveal").click(function(event){
-    $(this).toggleClass("active");
+//    $(this).toggleClass("active");
     $(this).parent().next().toggleClass("active");
     $(this).parent().siblings(".main-carousel").toggleClass("active");
-    if ($(this).hasClass("active")) {
+    if ($(this).parent().next().hasClass("active")) {
         $(this).children(".reveal").html("×")
     } else {
         $(this).children(".reveal").html("+")
@@ -79,12 +79,15 @@ $(".descript-reveal").click(function(event){
 
 $(".expand").click(function(event){
     $(".page").toggleClass("active");
+    $(".descript-reveal").toggleClass("active");
+    $(".main-carousel").toggleClass("current");
+    $(".work-title").toggleClass("active");
     $("html").toggleClass("locked");
     $(this).parent().parent().toggleClass("current");
     $(this).toggleClass("active");
 });
 
-$(".title").click(function(event){
+$(".title a").click(function(event){
     if (($(window).scrollTop() + $(window).height()) < $(document).height()){
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#info").offset().top

@@ -109,7 +109,7 @@ a:hover{
     width: 100%;
     padding: 0px;
     margin: auto auto;
-    margin-top: 92vh;
+    margin-top: 4vh;
     background-color: #ffffff;
 }
 
@@ -147,10 +147,10 @@ a:hover{
     visibility: visible;
     position: fixed;
     margin-left: 0px;
-    left: 60px;
+    left: 15px;
     top: 15px;
     z-index: 15;
-    width: calc(100vw - 120px);
+    width: calc(100vw - 30px);
     height: calc(100vh - 30px);
 }
 
@@ -160,6 +160,10 @@ a:hover{
     width: 60%;
     padding: 15px 0px 8px 0px;
     border-bottom: 1px solid #535353;
+}
+
+.work-title.active{
+    display: none;
 }
 
 .page-header{
@@ -182,6 +186,10 @@ a:hover{
     font-size: 45px;
     z-index: 10;
     line-height: 45px;
+}
+
+.descript-reveal.active{
+    display: none;
 }
 
 .expand{
@@ -339,6 +347,13 @@ a:hover{
 .main-carousel.active{
     opacity: 0.06;
     pointer-events: none;
+}
+
+.main-carousel.current{
+    top: 25px;
+    padding: 0px 75px;
+    width: calc(100% - 150px);
+    height: calc(100% - 50px);
 }
 
 .carousel-cell{

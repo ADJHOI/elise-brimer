@@ -13,8 +13,6 @@
     
     .page.current{
         margin-left: 0px !important;
-        left: 30px;
-        width: calc(100vw - 60px);
         max-height: calc(100vh - 30px);
     }
     
