@@ -81,6 +81,10 @@ $(".expand").click(function(event){
     $(".page").toggleClass("active");
     $(".descript-reveal").toggleClass("active");
     $(".main-carousel").toggleClass("current");
+    $(this).parent().next().removeClass("active");
+    $(this).next().children(".reveal").html("+");
+    $(this).parent().siblings(".main-carousel").removeClass("active");
+//    $(".work-descript").removeClass("active");
     $(".work-title").toggleClass("active");
     $("html").toggleClass("locked");
     $(this).parent().parent().toggleClass("current");
